@@ -1,6 +1,6 @@
 import { applyMiddleware, createStore, combineReducers } from "redux";
 import createSagaMiddleware from "redux-saga";
-import { fork } from "redux-saga/effects";
+import { fork, all } from "redux-saga/effects";
 
 import { createWrapper } from "next-redux-wrapper";
 
@@ -20,12 +20,12 @@ function* rootSaga() {
 }
 
 const rootReducer = combineReducers({
-  module: moduleReducer,
+  moduleReducer,
 });
 
 export const makeStore = (context) => {
   const sagaMiddleware = createSagaMiddleware();
-  const store = createStore(rootReducer, bindMiddleware([sagaMiddleware]));
+  const store = createStore(moduleReducer, bindMiddleware([sagaMiddleware]));
 
   store.sagaTask = sagaMiddleware.run(rootSaga);
 

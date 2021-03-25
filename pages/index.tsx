@@ -22,8 +22,8 @@ function Home() {
         </Link>
       </li>
       <li>
-        <Link href="/page">
-          <a>page</a>
+        <Link href="/star">
+          <a>star</a>
         </Link>
       </li>
       <li style={{ flexDirection: "column" }}>
