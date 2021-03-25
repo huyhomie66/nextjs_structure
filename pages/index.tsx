@@ -21,7 +21,7 @@ function Home() {
           <a>error</a>
         </Link>
       </li>
-       <li>
+      <li>
         <Link href="/page">
           <a>page</a>
         </Link>
