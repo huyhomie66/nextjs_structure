@@ -1,23 +1,28 @@
-import { bindMiddleware } from "./utils";
-
-import { createStore, applyMiddleware } from "redux";
+import { applyMiddleware, createStore } from "redux";
 import createSagaMiddleware from "redux-saga";
-import { rootSaga, rootReducer } from "saga-slice";
 import { createWrapper } from "next-redux-wrapper";
-
-import slice from "./slice";
+import { rootSaga, rootReducer } from "saga-slice";
+import slice from "./slice.js";
+import "regenerator-runtime";
 
 const modules = [slice];
 
-const appReducer = rootReducer(modules, {
-  myExtraReducer: (state, action) => {},
-});
+const bindMiddleware = (middleware) => {
+  if (process.env.NODE_ENV !== "production") {
+    const { composeWithDevTools } = require("redux-devtools-extension");
+    return composeWithDevTools(applyMiddleware(...middleware));
+  }
+  return applyMiddleware(...middleware);
+};
 
 export const makeStore = (context) => {
   const sagaMiddleware = createSagaMiddleware();
-  const store = createStore(appReducer, bindMiddleware([sagaMiddleware]));
+  const store = createStore(
+    rootReducer(modules),
+    bindMiddleware([sagaMiddleware])
+  );
 
-  sagaMiddleware.run(rootSaga(modules));
+  store.sagaTask = sagaMiddleware.run(rootSaga(modules));
 
   return store;
 };

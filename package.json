@@ -8,7 +8,8 @@
     "build-docker": "docker build -t next-app .",
     "build-docker-multistage": "docker build --target production -t next-app -f ./Dockerfile.multistage .",
     "run-docker": "docker run --rm -it -p 3000:3000 next-app",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@material-ui/core": "4.11.3",
@@ -20,6 +21,7 @@
     "next-cookie": "^2.6.0",
     "next-pwa": "^5.0.6",
     "next-redux-wrapper": "6.0.2",
+    "patch-package": "^6.4.7",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "7.2.3",

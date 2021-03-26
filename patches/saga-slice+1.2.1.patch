@@ -1,0 +1,12 @@
+diff --git a/node_modules/saga-slice/dist/index.js b/node_modules/saga-slice/dist/index.js
+index 2c5d15a..5e6b925 100644
+--- a/node_modules/saga-slice/dist/index.js
++++ b/node_modules/saga-slice/dist/index.js
+@@ -1,5 +1,7 @@
+ 'use strict';
+ 
++require( "regenerator-runtime/runtime")
++
+ Object.defineProperty(exports, '__esModule', { value: true });
+ 
+ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
