@@ -1,7 +1,7 @@
 import "@/styles/globals.scss";
 import { wrapper } from "@/store";
 
-function App({ Component, pageProps }: any) {
+function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
 

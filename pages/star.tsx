@@ -1,4 +1,8 @@
-function Page({ stars }) {
+import { useSelector } from "react-redux";
+
+function Page({ stars }: any) {
+  const state = useSelector((state) => state);
+  console.info(state);
   return <div>{JSON.stringify(stars)}</div>;
 }
 
