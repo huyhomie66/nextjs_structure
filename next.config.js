@@ -1,19 +1,4 @@
 const nextConfig = require("./config");
-const withPWA = require("next-pwa");
-
-const pwaConfig = {
-  devIndicators: {
-    autoPrerender: false,
-  },
-
-  pwa: {
-    disable: true,
-    dest: "pwa",
-    register: true,
-    scope: "/",
-  },
-};
-
 const webpackConfig = (config) => {
   config.node = {
     fs: "empty",
@@ -38,6 +23,6 @@ const webpackConfig = (config) => {
   return config;
 };
 
-const config = { ...nextConfig, ...pwaConfig, webpack: webpackConfig };
+const config = { ...nextConfig, webpack: webpackConfig };
 
-module.exports = withPWA(config);
+module.exports = config;

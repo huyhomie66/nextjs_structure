@@ -2,7 +2,7 @@ import { applyMiddleware, createStore } from "redux";
 import createSagaMiddleware from "redux-saga";
 import { createWrapper } from "next-redux-wrapper";
 import { rootSaga, rootReducer } from "saga-slice";
-import slice from "./slice.js";
+import slice from "./user/slice.js";
 import "regenerator-runtime";
 
 const modules = [slice];
