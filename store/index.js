@@ -2,8 +2,9 @@ import { applyMiddleware, createStore } from "redux";
 import createSagaMiddleware from "redux-saga";
 import { createWrapper } from "next-redux-wrapper";
 import { rootSaga, rootReducer } from "saga-slice";
+import { combineReducers } from "redux";
 import slice from "./user/slice.js";
-import "regenerator-runtime";
+import { watcherSaga } from "./normal_saga/saga";
 
 const modules = [slice];
 
@@ -15,12 +16,14 @@ const bindMiddleware = (middleware) => {
   return applyMiddleware(...middleware);
 };
 
+const normalSagaReducer = combineReducers({
+  watcherSaga,
+});
+const appReducer = rootReducer(modules, normalSagaReducer);
+
 export const makeStore = (context) => {
   const sagaMiddleware = createSagaMiddleware();
-  const store = createStore(
-    rootReducer(modules),
-    bindMiddleware([sagaMiddleware])
-  );
+  const store = createStore(appReducer, bindMiddleware([sagaMiddleware]));
 
   store.sagaTask = sagaMiddleware.run(rootSaga(modules));
 

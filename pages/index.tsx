@@ -6,11 +6,12 @@ import userSlice from "@/store/user/slice";
 function Home() {
   const [count, setCount] = useState();
   const dispatch = useDispatch();
-
+  const state = useSelector((state: any) => state);
+  console.info(state);
   const userState = useSelector((state: any) => state.user);
   useEffect(() => {
     dispatch(userSlice.actions.fetch());
-  });
+  }, []);
 
   return (
     <React.Fragment>
