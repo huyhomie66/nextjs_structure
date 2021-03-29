@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "nodemon server tsc",
-    "build": "next build && tsc --project tsconfig.server.json",
+    "build": "next build ",
     "start": "NODE_ENV=production node server",
     "build-docker": "docker build -t next-app .",
     "build-docker-multistage": "docker build --target production -t next-app -f ./Dockerfile.multistage .",
@@ -17,6 +17,7 @@
     "axios": "^0.21.1",
     "dotenv": "8.2.0",
     "immer": "^9.0.1",
+    "javascript-obfuscator": "^2.11.0",
     "next": "latest",
     "next-cookie": "^2.6.0",
     "next-redux-wrapper": "6.0.2",
@@ -27,7 +28,8 @@
     "redux-saga": "1.1.3",
     "saga-slice": "1.2.1",
     "sass": "^1.32.8",
-    "webpack": "4.44.1"
+    "webpack": "4.44.1",
+    "webpack-obfuscator": "^3.3.0"
   },
   "devDependencies": {
     "@svgr/webpack": "5.5.0",

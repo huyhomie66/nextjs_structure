@@ -1,4 +1,8 @@
-const nextConfig = require("./config");
+const nextConfig = require("./env.config");
+
+const WebpackObfuscator = require("webpack-obfuscator");
+const path = require("path");
+
 const webpackConfig = (config) => {
   config.node = {
     fs: "empty",
@@ -6,11 +10,14 @@ const webpackConfig = (config) => {
 
   config.module.rules.push({
     test: /\.(eot|woff|woff2|ttf|png|jpg|gif)$/,
+    exclude: [path.resolve(__dirname, "server/index.ts")],
+    enforce: "post",
     use: {
-      loader: "url-loader",
+      loader: WebpackObfuscator.loader,
       options: {
         limit: 100000,
         name: "[name].[ext]",
+        rotateStringArray: true,
       },
     },
   });
@@ -23,6 +30,6 @@ const webpackConfig = (config) => {
   return config;
 };
 
-const config = { ...nextConfig, webpack: webpackConfig };
+const config = { ...nextConfig, webpack: webpackConfig, compress: false };
 
 module.exports = config;

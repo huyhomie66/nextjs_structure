@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "isolatedModules": true,
     "target": "esnext",
     "module": "esnext",
     "jsx": "preserve",
@@ -8,7 +9,6 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "noUnusedParameters": true,
-    "isolatedModules": true,
     "removeComments": false,
     "preserveConstEnums": true,
     "sourceMap": true,
@@ -27,5 +27,13 @@
     }
   },
   "exclude": ["dist", "node_modules", ".next", "out", "next.config.js"],
-  "include": ["**/*.ts", "**/*.tsx", "**/*.css", "**/*.scss"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.css",
+    "**/*.scss",
+    "pages/api/service.js",
+    "env.config.js",
+    "webpack.config.js"
+  ]
 }
