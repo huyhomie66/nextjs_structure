@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-
+import { useSession } from "next-auth/client";
 function Page({ stars }: any) {
   const state = useSelector((state) => state);
   console.info(state);
