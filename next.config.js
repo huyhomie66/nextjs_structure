@@ -38,4 +38,4 @@ const config = withTM({
   compress: false,
 });
 
-module.exports = withPlugins([[css]], config);
+module.exports = config;

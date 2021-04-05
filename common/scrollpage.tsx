@@ -1,7 +1,6 @@
 import React from "react";
 import { Element } from "react-scroll";
 import { navbarItems } from "@/constants";
-import "@/styles/navbar-container.css";
 
 const ScrollPage = () => {
   return (

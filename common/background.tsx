@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import animation from "@/theme/animations/anim";
-import "@/styles/background.css";
 
 export default () => {
   useEffect(() => {

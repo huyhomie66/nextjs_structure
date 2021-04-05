@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import earth from "@/theme/animations/earth";
-import "@/styles/earth.css";
 
 export default () => {
   useEffect(() => {
