@@ -1,7 +1,9 @@
 const nextConfig = require("./env.config");
-
+const withTM = require("next-transpile-modules")(["animejs"]);
 const WebpackObfuscator = require("webpack-obfuscator");
+const withPlugins = require("next-compose-plugins");
 const path = require("path");
+const css = require("@zeit/next-css");
 
 const webpackConfig = (config) => {
   config.node = {
@@ -10,7 +12,7 @@ const webpackConfig = (config) => {
 
   config.module.rules.push({
     test: /\.(eot|woff|woff2|ttf|png|jpg|gif)$/,
-    exclude: [path.resolve(__dirname, "server/index.ts")],
+    exclude: [path.resolve(__dirname, "server/index.js")],
     enforce: "post",
     use: {
       loader: WebpackObfuscator.loader,
@@ -30,6 +32,10 @@ const webpackConfig = (config) => {
   return config;
 };
 
-const config = { ...nextConfig, webpack: webpackConfig, compress: false };
+const config = withTM({
+  ...nextConfig,
+  webpack: webpackConfig,
+  compress: false,
+});
 
-module.exports = config;
+module.exports = withPlugins([[css]], config);

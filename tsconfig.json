@@ -35,6 +35,7 @@
     "pages/api/service.js",
     "env.config.js",
     "webpack.config.js",
-    "server/index.js"
+    "server/index.js",
+    "pages/index.js"
   ]
 }
