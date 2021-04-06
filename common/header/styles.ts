@@ -1,9 +1,14 @@
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
-
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    active: {
+      color: "#4EE2EC",
+    },
+    deActive: {
+      color: "white",
+    },
     root: {
       display: "flex",
     },

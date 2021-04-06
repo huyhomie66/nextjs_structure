@@ -11,25 +11,17 @@ const ScrollPage = () => {
         id="navbar"
         style={{
           position: "relative",
-          height: "50vh",
+          height: "100vh",
           overflow: "scroll",
           marginBottom: "100px",
         }}
       >
         {navbarItems.map((item: any, index: number) => (
-          <Element
-            key={index}
-            name={item.title}
-            style={{
-              height: "50vh",
-            }}
-          >
-            {item.title}
-            {/* {item.component} */}
+          <Element key={index} name={item.title}>
+            {item.component}
           </Element>
         ))}
       </Element>
-      ;
     </React.Fragment>
   );
 };

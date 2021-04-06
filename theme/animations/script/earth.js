@@ -1,4 +1,5 @@
 import anime from "animejs/lib/anime.es.js";
+import "@/styles/earth.css";
 
 export default () => {
   function fitElementToParent(el, padding) {
@@ -33,7 +34,7 @@ export default () => {
             anime({
               targets: spherePathEls[i],
               stroke: {
-                value: ["#45b6fe", "rgba(80,80,80,.35)"],
+                value: ["#45b6fe", "rgba(80,80,80,35)"],
                 duration: 500,
               },
               translateX: [2, -4],

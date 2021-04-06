@@ -1,16 +1,15 @@
-// import Background from "@/common/background";
-import Earth from "@/common/earth";
-import NavBar from "@/common/navbar";
-import ScrollPage from "@/common/scrollpage";
+import React, { useEffect } from "react";
+import Header from "@/common/header";
+import Body from "@/common/body/scrollPage";
+import Background from "@/theme/animations/component/background";
 
 const Home = () => {
   return (
-    <div>
-      {/* <Earth /> */}
-      <NavBar />
-      <ScrollPage />
-      {/* <Background /> */}
-    </div>
+    <React.Fragment>
+      <Header />
+      <Body />
+      <Background />
+    </React.Fragment>
   );
 };
 

@@ -1,7 +1,7 @@
 import anime from "animejs/lib/anime.es.js";
 
 export default () => {
-  var pathEls = document.querySelectorAll("path");
+  var pathEls = document.querySelectorAll(".anim path");
   for (var i = 0; i < pathEls.length; i++) {
     var pathEl = pathEls[i];
     var offset = anime.setDashoffset(pathEl);

@@ -1,13 +1,14 @@
 import { useEffect } from "react";
-import earth from "@/theme/animations/earth";
+import earthAnimation from "@/theme/animations/script/earth";
+import clsx from "clsx";
 
-export default () => {
+const Earth = ({ style, className }: any) => {
   useEffect(() => {
-    earth();
+    earthAnimation();
   }, []);
 
   return (
-    <div className="animation-wrapper">
+    <div style={style} className={clsx("animation-wrapper", className)}>
       <div className="sphere-animation">
         <svg
           className="sphere"
@@ -22,9 +23,9 @@ export default () => {
               y1="0%"
               y2="15%"
             >
-              <stop stop-color="#373734" offset="0%" />
-              <stop stop-color="#242423" offset="50%" />
-              <stop stop-color="#0D0D0C" offset="100%" />
+              <stop stopColor="#373734" offset="0%" />
+              <stop stopColor="#242423" offset="50%" />
+              <stop stopColor="#0D0D0C" offset="100%" />
             </linearGradient>
           </defs>
           <path d="M361.604 361.238c-24.407 24.408-51.119 37.27-59.662 28.727-8.542-8.543 4.319-35.255 28.726-59.663 24.408-24.407 51.12-37.269 59.663-28.726 8.542 8.543-4.319 35.255-28.727 59.662z" />
@@ -53,3 +54,5 @@ export default () => {
     </div>
   );
 };
+
+export default Earth;
