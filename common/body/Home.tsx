@@ -8,9 +8,6 @@ import FrameContainer from "@/theme/layout/frame.container";
 const useStyles = makeStyles({
   frameContainer: {
     marginTop: 100,
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
   },
   earth: {
     height: "100vh",
@@ -28,7 +25,7 @@ const TextFrame = () => {
 
   return (
     <div className={classes.textFrameContainer}>
-      <Typography variant="h4" className={classes.textFrame}>
+      <Typography variant="h3" className={classes.textFrame}>
         <Typist>
           We are big Service of building Security Web and Application
         </Typist>

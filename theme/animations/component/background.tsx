@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import background from "@/theme/animations/script/background";
+import backgroundFrame from "@/theme/animations/script/background";
+import "./background.css";
 
-export default () => {
+const Background = () => {
   useEffect(() => {
-    background();
+    backgroundFrame();
   }, []);
 
   return (
@@ -229,3 +230,5 @@ export default () => {
     </div>
   );
 };
+
+export default Background;

@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import earthAnimation from "@/theme/animations/script/earth";
+import earthFrame from "@/theme/animations/script/earth";
 import clsx from "clsx";
 
 const Earth = ({ style, className }: any) => {
   useEffect(() => {
-    earthAnimation();
+    earthFrame();
   }, []);
 
   return (

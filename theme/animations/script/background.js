@@ -1,6 +1,6 @@
 import anime from "animejs/lib/anime.es.js";
 
-export default () => {
+const Background = () => {
   var pathEls = document.querySelectorAll(".anim path");
   for (var i = 0; i < pathEls.length; i++) {
     var pathEl = pathEls[i];
@@ -18,3 +18,5 @@ export default () => {
     });
   }
 };
+
+export default Background;
