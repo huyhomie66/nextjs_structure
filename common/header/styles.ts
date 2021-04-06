@@ -1,10 +1,10 @@
-import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
+import { makeStyles, createStyles } from "@material-ui/core/styles";
 const drawerWidth = 240;
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles((theme: any) =>
   createStyles({
     active: {
-      color: "#4EE2EC",
+      color: theme.palette.active,
     },
     deActive: {
       color: "white",
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: "flex",
     },
     appBar: {
-      backgroundColor: "#45b6fe",
+      backgroundColor: theme.palette.darkGreen,
       transition: theme.transitions.create(["margin", "width"], {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,

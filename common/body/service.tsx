@@ -1,13 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
-import Typist from "react-typist";
-
-import Earth from "@/theme/animations/component/earth";
 import FrameContainer from "@/theme/layout/frame.container";
 
-const useStyles = makeStyles({
-  frameContainer: {},
-});
+const useStyles = makeStyles((theme: any) => ({
+  frameContainer: {
+    backgroundColor: theme.palette.darkGreen,
+  },
+}));
 
 const AboutUs = () => {
   const classes = useStyles();

@@ -34,7 +34,7 @@ const TextFrame = () => {
   );
 };
 
-const AboutUs = () => {
+const Home = () => {
   const classes = useStyles();
   return (
     <FrameContainer className={classes.frameContainer}>
@@ -44,4 +44,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default Home;

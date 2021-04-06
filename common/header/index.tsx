@@ -89,7 +89,6 @@ const Navbar = () => {
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
-        style={{ backgroundColor: "#25383C" }}
       >
         <Toolbar>
           <Typography variant="h6" noWrap className={classes.title}>
