@@ -1,5 +1,4 @@
 import anime from "animejs/lib/anime.es.js";
-import "@/styles/earth.css";
 
 export default () => {
   function fitElementToParent(el, padding) {

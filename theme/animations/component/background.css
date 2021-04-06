@@ -5,3 +5,11 @@
   top: 0px;
   z-index: -1;
 }
+.anim svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.anim path {
+  stroke-width: 2;
+}
