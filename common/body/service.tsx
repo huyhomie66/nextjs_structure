@@ -1,9 +1,11 @@
+import { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
+
 import FrameContainer from "@/theme/layout/frame.container";
+import cardScript from "@/theme/animations/script/card";
+
 import ServiceCard from "@/common/serviceCard";
 import { serviceItems } from "@/constants";
-import { useEffect } from "react";
-import cardScript from "@/theme/animations/script/card";
 
 const useStyles = makeStyles((theme: any) => ({
   frameContainer: {
@@ -14,7 +16,7 @@ const useStyles = makeStyles((theme: any) => ({
   },
 }));
 
-const AboutUs = () => {
+export default function Service() {
   const classes = useStyles();
   useEffect(() => {
     Promise.all(
@@ -43,6 +45,4 @@ const AboutUs = () => {
       ))}
     </FrameContainer>
   );
-};
-
-export default AboutUs;
+}

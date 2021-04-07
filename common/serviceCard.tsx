@@ -27,14 +27,15 @@ export default function ServiceCard({
   subTitle,
   action,
   frame,
+  isProduct,
 }: {
+  isProduct?: boolean;
   frame?: any;
   title: string;
   subTitle: string;
   description?: string;
   action: any;
 }) {
-  console.info(frame.targets);
   const classes = useStyles();
   return (
     <Card className={clsx(classes.root, frame.targets)}>
@@ -42,7 +43,7 @@ export default function ServiceCard({
       <CardContent>{subTitle}</CardContent>
       {description && <CardContent>{description}</CardContent>}
       <CardActions className={classes.cardActions}>
-        <Button onClick={action}>See more</Button>
+        <Button onClick={action}> {isProduct ? "Get Demo" : "See more"}</Button>
       </CardActions>
     </Card>
   );

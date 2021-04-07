@@ -47,4 +47,36 @@ const serviceItems = [
   },
 ];
 
-export { navbarItems, serviceItems };
+const productItems = [
+  {
+    title: "Streaming",
+    icon: "",
+    description: " ",
+  },
+  {
+    title: "Chat",
+    icon: "",
+    description: " ",
+  },
+  {
+    title: "Automation Test",
+    icon: "",
+    description: " ",
+  },
+  {
+    title: "BlockChain",
+    icon: "",
+    description: " ",
+  },
+  {
+    title: "Teck ",
+    icon: "",
+    description: " ",
+  },
+  {
+    title: "Streaming",
+    icon: "",
+    description: " ",
+  },
+];
+export { navbarItems, serviceItems, productItems };
