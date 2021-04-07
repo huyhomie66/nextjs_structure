@@ -1,0 +1,12 @@
+.col-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 20vh;
+}
+
+.stack {
+  background-color: #25383c;
+  height: 20px;
+  width: 20px;
+}

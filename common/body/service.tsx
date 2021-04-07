@@ -3,7 +3,8 @@ import FrameContainer from "@/theme/layout/frame.container";
 
 const useStyles = makeStyles((theme: any) => ({
   frameContainer: {
-    backgroundColor: theme.palette.darkBlue,
+    height: "55vh",
+    backgroundColor: theme.palette.darkGreen,
   },
 }));
 

@@ -5,20 +5,19 @@ import Typist from "react-typist";
 import Earth from "@/theme/animations/component/earth";
 import FrameContainer from "@/theme/layout/frame.container";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   frameContainer: {
     marginTop: 100,
-  },
-  earth: {
-    height: "100vh",
+    height: "45vh",
   },
   textFrameContainer: {
+    paddingTop: theme.spacing(10),
     width: "30vw",
   },
   textFrame: {
     fontWeight: "bold",
   },
-});
+}));
 
 const TextFrame = () => {
   const classes = useStyles();
@@ -26,9 +25,7 @@ const TextFrame = () => {
   return (
     <div className={classes.textFrameContainer}>
       <Typography variant="h3" className={classes.textFrame}>
-        <Typist>
-          We are big Service of building Security Web and Application
-        </Typist>
+        <Typist>We are big Service of Security</Typist>
       </Typography>
     </div>
   );
@@ -39,7 +36,7 @@ const Home = () => {
   return (
     <FrameContainer className={classes.frameContainer}>
       <TextFrame />
-      <Earth className={classes.earth} />
+      <Earth />
     </FrameContainer>
   );
 };

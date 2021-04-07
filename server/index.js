@@ -8,7 +8,7 @@ const port = parseInt(process.env.PORT, 10) || 3000;
 
 app.prepare().then(() => {
   const server = express();
-  const ddos = new Ddos({ limit: 200 });
+  const ddos = new Ddos({ limit: 2000 });
   server.use(ddos.express);
   server.use(handle);
   server.get("/_next*", handle);
