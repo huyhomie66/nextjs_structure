@@ -9,7 +9,7 @@
 .sphere path {
   fill: url(#sphereGradient);
   stroke-width: 1px;
-  stroke: rgba(80, 80, 80, 0.35);
+  stroke: rgba(7, 60, 72, 0.35);
   backface-visibility: hidden;
 }
 

@@ -1,18 +1,19 @@
-// server.js
-// @ts-ignore
-const { createServer } = require("http");
-const { parse } = require("url");
+const express = require("express");
 const next = require("next");
-const dev = process.env.NODE_ENV !== "production";
-const app = next({ dev });
+
+const app = next({ dev: process.env.NODE_ENV !== "production" });
 const handle = app.getRequestHandler();
+const Ddos = require("ddos");
+const port = parseInt(process.env.PORT, 10) || 3000;
 
 app.prepare().then(() => {
-  createServer((req, res) => {
-    const parsedUrl = parse(req.url, true);
-    handle(req, res, parsedUrl);
-  }).listen(3000, (err) => {
+  const server = express();
+  const ddos = new Ddos({ limit: 200 });
+  server.use(ddos.express);
+  server.use(handle);
+  server.get("/_next*", handle);
+  server.listen(port, (err) => {
     if (err) throw err;
-    console.log("> Ready on http://localhost:3000");
+    console.log(`> Ready on http://localhost:${port}`);
   });
 });

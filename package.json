@@ -18,6 +18,7 @@
     "animejs": "^3.2.1",
     "axios": "^0.21.1",
     "clsx": "^1.1.1",
+    "ddos": "^0.2.1",
     "dotenv": "8.2.0",
     "express": "^4.17.1",
     "next": "latest",

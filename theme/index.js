@@ -14,6 +14,7 @@ let theme = createMuiTheme({
       main: red.A400,
     },
     darkGreen: "#25383C",
+    darkBlue: "rgba(7, 60, 72, 0.35)",
     active: "#4EE2EC",
     background: {
       default: "#fff",
