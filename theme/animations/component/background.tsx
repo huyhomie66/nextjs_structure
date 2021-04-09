@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./background.css";
+import backgroundScript from "../script/background";
 
 const Background = () => {
+  useEffect(() => {
+    backgroundScript();
+  }, []);
+
   return (
     <div className="anim">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 800">

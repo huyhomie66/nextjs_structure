@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
   textFrameContainer: {
     paddingTop: theme.spacing(10),
-    width: "30vw",
+    width: "40vw",
   },
   textFrame: {
     fontWeight: "bold",
@@ -26,7 +26,12 @@ const TextFrame = () => {
   return (
     <div className={classes.textFrameContainer}>
       <Typography variant="h3" className={classes.textFrame}>
-        <Typist>We are big Service of Security</Typist>
+        <Typist>
+          {` Global JavaScript Company \n
+           Building Perfect Application\n
+           Strong OF Security\n
+           Fast Development`}
+        </Typist>
       </Typography>
     </div>
   );
