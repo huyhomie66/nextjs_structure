@@ -1,11 +1,30 @@
 import Home from "@/common/body/home";
 import Service from "@/common/body/service";
+import {
+  earthScript,
+  backgroundScript,
+  colstackScript,
+  cardScript,
+} from "@/theme/animations/script";
 
 const navbarItems = [
-  { title: "Home", component: <Home /> },
-  { title: "Service", component: <Service /> },
-  { title: "Product", component: <div style={{ height: "50vh" }} /> },
-  { title: "About", component: <div style={{ height: "50vh" }} /> },
+  { title: "Home", component: <Home />, script: earthScript },
+  {
+    title: "Product",
+    component: <div style={{ height: "50vh" }} />,
+    script: () => {},
+  },
+  {
+    title: "Cost",
+    component: <div style={{ height: "50vh" }} />,
+    script: () => {},
+  },
+  {
+    title: "About",
+    component: <div style={{ height: "50vh" }} />,
+    script: () => {},
+  },
+  { title: "Service", component: <Service />, script: cardScript },
 ];
 
 const serviceItems = [

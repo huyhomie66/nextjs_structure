@@ -1,13 +1,7 @@
-import { useEffect } from "react";
-import earthFrame from "@/theme/animations/script/earth";
 import clsx from "clsx";
 import "./earth.css";
 
 const Earth = ({ style, className }: any) => {
-  useEffect(() => {
-    earthFrame();
-  }, []);
-
   return (
     <div style={style} className={clsx("animation-wrapper", className)}>
       <div className="sphere-animation">

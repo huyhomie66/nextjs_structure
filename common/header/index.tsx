@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-
 import clsx from "clsx";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import Toolbar from "@material-ui/core/Toolbar";
+
 import MenuIcon from "@material-ui/icons/Menu";
-import Hidden from "@material-ui/core/Hidden";
-import AppBar from "@material-ui/core/AppBar";
+import {
+  Hidden,
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+} from "@material-ui/core";
 
 import { useStyles } from "@/common/header/styles";
 import NavbarDrawer from "@/common/header/drawer";
@@ -22,6 +24,14 @@ const NavBarTitle = () => {
     console.info(e);
     setActive(e);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      const test = navbarItems[active].script;
+      test();
+    }, 250);
+  }, [active]);
+
   return (
     <Hidden xsDown>
       {navbarItems.map((item: any, index: number) => {

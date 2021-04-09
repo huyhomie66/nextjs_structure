@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "@/common/header";
-import Body from "@/common/body/scrollPage";
+import Body from "@/common/body";
 import Background from "@/theme/animations/component/background";
 // import ColStack from "@/theme/animations/component/colstack";
 

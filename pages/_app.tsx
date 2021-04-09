@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import theme from "@/theme";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import "animate.css/animate.min.css";
 
 function App({ Component, pageProps }: any) {
   useEffect(() => {
