@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
+import { InView } from "react-intersection-observer";
 
 const useStyles = makeStyles((theme: any) => ({
   frameContainer: {
@@ -12,17 +13,30 @@ const useStyles = makeStyles((theme: any) => ({
   },
 }));
 
-const FrameContainer = ({ children, className, style, ...props }: any) => {
+const FrameContainer = ({
+  children,
+  className,
+  style,
+  onActiveView,
+  ...props
+}: {
+  children?: any;
+  className?: string;
+  style?: any;
+  onActiveView?: any;
+}) => {
   const classes = useStyles();
 
   return (
-    <div
+    <InView
+      as="div"
+      onChange={onActiveView}
       className={clsx(classes.frameContainer, className)}
       style={style}
       {...props}
     >
       {children}
-    </div>
+    </InView>
   );
 };
 

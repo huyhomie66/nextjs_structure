@@ -3,6 +3,7 @@ import { Typography } from "@material-ui/core";
 import Typist from "react-typist";
 
 import Earth from "@/theme/animations/component/earth";
+import { earthScript } from "@/theme/animations/script";
 import FrameContainer from "@/theme/layout/frame.container";
 
 const useStyles = makeStyles((theme) => ({
@@ -34,7 +35,12 @@ const TextFrame = () => {
 const Home = () => {
   const classes = useStyles();
   return (
-    <FrameContainer className={classes.frameContainer}>
+    <FrameContainer
+      className={classes.frameContainer}
+      onActiveView={(inView: any) => {
+        inView && earthScript();
+      }}
+    >
       <TextFrame />
       <Earth />
     </FrameContainer>

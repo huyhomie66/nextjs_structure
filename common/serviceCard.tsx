@@ -32,9 +32,9 @@ export default function ServiceCard({
   isProduct?: boolean;
   frame?: any;
   title: string;
-  subTitle: string;
+  subTitle?: string;
   description?: string;
-  action: any;
+  action?: any;
 }) {
   const classes = useStyles();
   return (

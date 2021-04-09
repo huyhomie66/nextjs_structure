@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import clsx from "clsx";
 
@@ -24,13 +24,6 @@ const NavBarTitle = () => {
     console.info(e);
     setActive(e);
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      const test = navbarItems[active].script;
-      test();
-    }, 250);
-  }, [active]);
 
   return (
     <Hidden xsDown>

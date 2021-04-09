@@ -1,10 +1,9 @@
-import { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-
-import FrameContainer from "@/theme/layout/frame.container";
 
 import ServiceCard from "@/common/serviceCard";
 import { serviceItems } from "@/constants";
+import FrameContainer from "@/theme/layout/frame.container";
+import { cardScript } from "@/theme/animations/script";
 
 const useStyles = makeStyles((theme: any) => ({
   frameContainer: {
@@ -19,7 +18,12 @@ export default function Service() {
   const classes = useStyles();
 
   return (
-    <FrameContainer className={classes.frameContainer}>
+    <FrameContainer
+      className={classes.frameContainer}
+      onActiveView={(inView: any) => {
+        inView && cardScript();
+      }}
+    >
       {serviceItems.map((e: any, i: number) => (
         <ServiceCard
           key={i}
