@@ -9,6 +9,7 @@ import {
 
 const navbarItems = [
   { title: "Home", component: <Home />, script: earthScript },
+  { title: "Service", component: <Service />, script: cardScript },
   {
     title: "Product",
     component: <div style={{ height: "50vh" }} />,
@@ -24,7 +25,6 @@ const navbarItems = [
     component: <div style={{ height: "50vh" }} />,
     script: () => {},
   },
-  { title: "Service", component: <Service />, script: cardScript },
 ];
 
 const serviceItems = [

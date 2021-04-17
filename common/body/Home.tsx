@@ -6,17 +6,20 @@ import Earth from "@/theme/animations/component/earth";
 import { earthScript } from "@/theme/animations/script";
 import FrameContainer from "@/theme/layout/frame.container";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: any) => ({
   frameContainer: {
-    marginTop: 100,
-    height: "45vh",
+    marginTop: theme.spacing(20),
+    height: theme.heightSpace(6),
   },
   textFrameContainer: {
     paddingTop: theme.spacing(10),
-    width: "40vw",
+    width: theme.withSpace(4),
   },
   textFrame: {
     fontWeight: "bold",
+    display: "flex",
+    flexDirection: "column",
+    flex: 1,
   },
 }));
 
@@ -26,11 +29,22 @@ const TextFrame = () => {
   return (
     <div className={classes.textFrameContainer}>
       <Typography variant="h3" className={classes.textFrame}>
-        <Typist>
-          {` Global JavaScript Company \n
-           Building Perfect Application\n
-           Strong OF Security\n
-           Fast Development`}
+        <Typist
+          className="TypistExample-message"
+          cursor={{ hideWhenDone: true }}
+        >
+          . Global JavaScript Company
+          <Typist.Delay ms={500} />
+          <br />
+          . Building Perfect Application
+          <Typist.Delay ms={400} />
+          <br />
+          . Strong Of Security
+          <Typist.Delay ms={300} />
+          <br />
+          . Fast Development
+          <Typist.Delay ms={100} />
+          <br />
         </Typist>
       </Typography>
     </div>

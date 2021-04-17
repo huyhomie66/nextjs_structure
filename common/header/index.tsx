@@ -95,7 +95,7 @@ const Navbar = () => {
       >
         <Toolbar>
           <Typography variant="h6" noWrap className={classes.title}>
-            Persistent
+            Persistent Script
           </Typography>
           <NavBarTitle />
           <MenuIconMobile handleDrawerOpen={handleDrawerOpen} open={open} />

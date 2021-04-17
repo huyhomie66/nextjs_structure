@@ -2,15 +2,17 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import ServiceCard from "@/common/serviceCard";
 import { serviceItems } from "@/constants";
+// @ts-ignore
 import FrameContainer from "@/theme/layout/frame.container";
 import { cardScript } from "@/theme/animations/script";
 
 const useStyles = makeStyles((theme: any) => ({
   frameContainer: {
-    height: "100vh",
+    height: theme.heightSpace(6),
     backgroundColor: theme.palette.darkGreen,
     display: "flex",
     justifyContent: "space-around",
+  alignItems:"center"
   },
 }));
 

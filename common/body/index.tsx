@@ -30,6 +30,9 @@ const ScrollPage = () => {
           height: "100vh",
           overflow: "scroll",
           marginBottom: "100px",
+          margin: 0,
+          overflowX: 'hidden',
+          overflowY: 'scroll'
         }}
       >
         {navbarItems.map((item: any, index: number) => (
