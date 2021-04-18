@@ -1,5 +1,6 @@
 import Home from "@/common/body/home";
 import Service from "@/common/body/service";
+import Product from "@/common/body/product";
 import {
   earthScript,
   backgroundScript,
@@ -12,7 +13,7 @@ const navbarItems = [
   { title: "Service", component: <Service />, script: cardScript },
   {
     title: "Product",
-    component: <div style={{ height: "50vh" }} />,
+    component: <Product />,
     script: () => {},
   },
   {
@@ -68,32 +69,42 @@ const serviceItems = [
 
 const productItems = [
   {
-    title: "Streaming",
+    title: "Taxi App",
     icon: "",
     description: " ",
   },
   {
-    title: "Chat",
+    title: "Chat Web/App",
     icon: "",
     description: " ",
   },
   {
-    title: "Automation Test",
+    title: "Dating Web/App",
     icon: "",
     description: " ",
   },
   {
-    title: "BlockChain",
+    title: "Food Web/App",
     icon: "",
     description: " ",
   },
   {
-    title: "Teck ",
+    title: "Payment Web/App",
     icon: "",
     description: " ",
   },
   {
-    title: "Streaming",
+    title: "Streaming Web/App",
+    icon: "",
+    description: " ",
+  },
+  {
+    title: "Streaming Web/App",
+    icon: "",
+    description: " ",
+  },
+  {
+    title: "Streaming Web/App",
     icon: "",
     description: " ",
   },

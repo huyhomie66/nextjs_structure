@@ -8,18 +8,25 @@ import FrameContainer from "@/theme/layout/frame.container";
 
 const useStyles = makeStyles((theme: any) => ({
   frameContainer: {
-    marginTop: theme.spacing(20),
     height: theme.heightSpace(6),
+    display: "flex",
+    justifyContent: "space-evenly",
+    alignItems:"center"
   },
   textFrameContainer: {
-    paddingTop: theme.spacing(10),
     width: theme.withSpace(4),
+
+
   },
   textFrame: {
+    height: theme.heightSpace(3),
     fontWeight: "bold",
     display: "flex",
-    flexDirection: "column",
-    flex: 1,
+  },
+  colStack: {
+    marginTop: theme.heightSpace(1),
+  },
+  earth: {
   },
 }));
 
@@ -61,7 +68,7 @@ const Home = () => {
       }}
     >
       <TextFrame />
-      <Earth />
+      <Earth className={classes.earth} />
     </FrameContainer>
   );
 };

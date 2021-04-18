@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import "./earth.css";
 
-const Earth = ({ style, className }: any) => {
+const Earth = ({ style, className }: { style?: any; className?: any }) => {
   return (
     <div style={style} className={clsx("animation-wrapper", className)}>
       <div className="sphere-animation">

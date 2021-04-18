@@ -27,6 +27,7 @@
     "react-dom": "^16.7.0",
     "react-intersection-observer": "^8.31.0",
     "react-scroll": "^1.8.2",
+    "react-transition-group": "^4.4.1",
     "react-typist": "^2.0.5",
     "styled-components": "^5.2.3"
   },

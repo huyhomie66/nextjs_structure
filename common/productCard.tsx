@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     alignItems: "center",
   },
+  title: {
+    color: "white",
+  },
 }));
 
 export default function ServiceCard({
@@ -27,7 +30,6 @@ export default function ServiceCard({
   subTitle,
   action,
   className,
-  isProduct,
 }: {
   isProduct?: boolean;
   className?: any;
@@ -38,12 +40,12 @@ export default function ServiceCard({
 }) {
   const classes = useStyles();
   return (
-    <Card className={clsx(classes.root,className)}>
-      <CardHeader title={title}  />
+    <Card className={clsx(classes.root, className)}>
+      <CardHeader title={title} className={classes.title} />
       <CardContent>{subTitle}</CardContent>
       {description && <CardContent>{description}</CardContent>}
       <CardActions className={classes.cardActions}>
-        <Button onClick={action}> {isProduct ? "Get Demo" : "See more"}</Button>
+        <Button onClick={action}> Get Demo</Button>
       </CardActions>
     </Card>
   );

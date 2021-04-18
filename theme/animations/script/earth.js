@@ -1,6 +1,6 @@
 import anime from "animejs/lib/anime.es.js";
 
-export default () => {
+export default function Earth() {
   function fitElementToParent(el, padding) {
     var timeout = null;
     function resize() {
@@ -96,4 +96,4 @@ export default () => {
 
     init();
   })();
-};
+}

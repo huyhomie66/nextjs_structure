@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme: any) =>
     },
     root: {
       display: "flex",
+      paddingBottom :theme.heightSpace(1)
     },
     appBar: {
       backgroundColor: theme.palette.darkBlue,

@@ -29,7 +29,7 @@ export default function Service() {
       {serviceItems.map((e: any, i: number) => (
         <ServiceCard
           key={i}
-          frame={e.frame}
+          className={e?.frame?.targets}
           title={e.title}
           subTitle={e.subTitle}
           action={e.action}

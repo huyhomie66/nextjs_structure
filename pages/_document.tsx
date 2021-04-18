@@ -3,6 +3,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from "@material-ui/core/styles";
 import theme from "@/theme";
 import { CssBaseline } from "@material-ui/core";
+
 export default class MyDocument extends Document {
   render() {
     return (
@@ -10,6 +11,7 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta name="description" content="Your Cryptocurrency Portfolio" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
