@@ -6,17 +6,15 @@ import {
   Button,
 } from "@material-ui/core";
 
-import { makeStyles, Theme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
+import { ThemeCustom } from "@/interface";
 import clsx from "clsx";
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme: ThemeCustom) => ({
   root: {
-    marginTop: theme.spacing(20),
-    width: "20vw",
-    height: "35vh",
+    width: theme.withSpace(1.6),
   },
   cardActions: {
-    display: "flex",
     alignItems: "center",
   },
 }));
@@ -38,12 +36,12 @@ export default function ServiceCard({
 }) {
   const classes = useStyles();
   return (
-    <Card className={clsx(classes.root,className)}>
-      <CardHeader title={title}  />
+    <Card className={clsx(classes.root, className)}>
+      <CardHeader title={title} />
       <CardContent>{subTitle}</CardContent>
       {description && <CardContent>{description}</CardContent>}
       <CardActions className={classes.cardActions}>
-        <Button onClick={action}> {isProduct ? "Get Demo" : "See more"}</Button>
+        <Button onClick={action}> See more</Button>
       </CardActions>
     </Card>
   );

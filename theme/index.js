@@ -3,9 +3,9 @@ import red from "@material-ui/core/colors/red";
 
 // Create a theme instance.
 let defaultTheme = createMuiTheme({
-  spacing : factor => `${0.25 * factor}rem`, 
-    heightSpace : factor => `${12 * factor}vh`, 
-    withSpace: factor => `${12 * factor}vw`, 
+  spacing: (factor) => `${0.25 * factor}rem`,
+  heightSpace: (factor) => `${12 * factor}vh`,
+  withSpace: (factor) => `${12 * factor}vw`,
   palette: {
     primary: {
       main: "#556cd6",
